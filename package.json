@@ -4,6 +4,9 @@
   "description": "Orbit Controls for THREE.js on Expo",
   "author": "Evan Bacon <baconbrix@gmail.com> (https://baconbrix.com/)",
   "keywords": [
+    "react",
+    "native",
+    "gestures",
     "expo",
     "exponent",
     "three.js",
@@ -14,14 +17,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "private": true,
+  "private": false,
   "main": "index.js",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git@github.com:EvanBacon/expo-three-orbit-controls.git"
   },
-  "dependencies": {
+  "devDependencies": {
     "react": "16.0.0-alpha.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-17.0.0.tar.gz",
     "three": "^0.85.2"
