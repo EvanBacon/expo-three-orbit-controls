@@ -6,6 +6,7 @@ var THREE = require('three')
  * @author alteredq / http://alteredqualia.com/
  * @author WestLangley / http://github.com/WestLangley
  * @author erich666 / http://erichaines.com
+ * @author fibo / https://github.com/fibo
  */
 
 // This set of controls performs orbiting, dollying (zooming), and panning.
