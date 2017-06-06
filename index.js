@@ -1,27 +1,14 @@
-import Expo from 'expo';
 import React from 'react';
 import { PanResponder, View } from 'react-native';
-
 const THREE = require('three');
-// global.THREE = THREE;
-// require('three/src/core/EventDispatcher');
+const Controls = require('./OrbitControls');
 
-import ExpoTHREE from 'expo-three';
+// console.ignoredYellowBox = [
+//   'THREE.WebGLRenderer',
+//   'THREE.WebGLProgram',
+// ];
 
-
-// THREE warns us about some GL extensions that `Expo.GLView` doesn't support
-// yet. This is ok, most things will still work, and we'll support those
-// extensions hopefully soon.
-// console.disableYellowBox = true;
-
-console.ignoredYellowBox = [
-  'THREE.WebGLRenderer',
-  'THREE.WebGLProgram',
-];
-
-const OrbitControls = require('./OrbitControls');
-
-export class Controls extends React.Component {
+class OrbitControls extends React.Component {
 
   constructor(props) {
     super(props);
@@ -43,7 +30,7 @@ export class Controls extends React.Component {
 
   updateWithCamera = (camera, width, height) => {
     if (!camera) return null;
-    const controls = new OrbitControls(camera, width, height);
+    const controls = new Controls(camera, width, height);
     return {
       controls,
       panResponder: this.buildGestures(controls)
@@ -90,15 +77,28 @@ export class Controls extends React.Component {
     )
   }
 }
-Controls.propTypes = {
+OrbitControls.propTypes = {
   width: React.PropTypes.number,
   height:  React.PropTypes.number,
 }
-Controls.defaultProps = {
+OrbitControls.defaultProps = {
   width: 0,
   height: 0,
   camera: null,
 }
+export default OrbitControls;
+
+/*
+
+import Expo from 'expo';
+
+import ExpoTHREE from 'expo-three';
+
+
+// THREE warns us about some GL extensions that `Expo.GLView` doesn't support
+// yet. This is ok, most things will still work, and we'll support those
+// extensions hopefully soon.
+console.disableYellowBox = true;
 
 
 class App extends React.Component {
@@ -164,3 +164,4 @@ class App extends React.Component {
   }
 
   Expo.registerRootComponent(App);
+  */
