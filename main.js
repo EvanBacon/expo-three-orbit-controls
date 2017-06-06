@@ -21,10 +21,6 @@ console.ignoredYellowBox = [
 
 const OrbitControls = require('./OrbitControls');
 
-
-import Gestures from 'react-native-easy-gestures';
-
-
 export class Controls extends React.Component {
 
   constructor(props) {

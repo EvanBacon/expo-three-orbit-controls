@@ -1,16 +1,30 @@
 {
   "name": "orbit-controls",
-  "version": "0.0.0",
-  "description": "Hello Expo!",
-  "author": null,
+  "version": "1.0.0",
+  "description": "Orbit Controls for THREE.js on Expo",
+  "author": "Evan Bacon <baconbrix@gmail.com> (https://baconbrix.com/)",
+  "keywords": [
+    "expo",
+    "exponent",
+    "three.js",
+    "gl",
+    "graphics",
+    "opengl"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "private": true,
   "main": "main.js",
+  "license": "MIT",
+  "peerDependencies": {
+    "three": "*"
+  },
   "dependencies": {
     "expo": "17.0.0",
     "expo-three": "^1.0.0",
     "react": "16.0.0-alpha.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-17.0.0.tar.gz",
-    "react-native-easy-gestures": "^1.0.6",
     "three": "^0.85.2"
   }
 }
