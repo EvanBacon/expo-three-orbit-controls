@@ -1,18 +1,16 @@
 # expo-three-orbit-controls
+
 Three.js Orbit Controls bridged into React Native
 
-expo-three-orbit-controls
-
-ThreeJS OrbitControls bridged to work with React Native.
-
 ```jsx
-  <Controls
+  <OrbitControls
     style={{flex: 1}}
     camera={this.state.camera}>
     <Expo.GLView
       style={{ flex: 1 }}
-    onContextCreate={this._onGLContextCreate}/>
-  </Controls>
+      onContextCreate={this._onGLContextCreate}
+    />
+  </OrbitControls>
 ```
 
 ## Usage
