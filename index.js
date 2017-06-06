@@ -1,12 +1,7 @@
 import React from 'react';
 import { PanResponder, View } from 'react-native';
 const THREE = require('three');
-const Controls = require('./OrbitControls');
-
-// console.ignoredYellowBox = [
-//   'THREE.WebGLRenderer',
-//   'THREE.WebGLProgram',
-// ];
+const Controls = require('./lib/OrbitControls');
 
 class OrbitControls extends React.Component {
 
