@@ -1,5 +1,7 @@
 # expo-three-orbit-controls
 
+**I recommend you use https://github.com/EvanBacon/expo-three-template instead**
+
 Three.js Orbit Controls bridged into React Native
 
 ```jsx
