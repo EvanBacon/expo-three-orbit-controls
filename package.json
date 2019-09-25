@@ -1,6 +1,6 @@
 {
   "name": "expo-three-orbit-controls",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Orbit Controls for THREE.js on Expo",
   "author": "Evan Bacon <baconbrix@gmail.com> (https://baconbrix.com/)",
   "keywords": [
