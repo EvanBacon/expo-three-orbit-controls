@@ -1,22 +1,28 @@
 # expo-three-orbit-controls
 
-**I recommend you use https://github.com/EvanBacon/expo-three-template instead**
+[![supports iOS](https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff)](https://itunes.apple.com/app/apple-store/id982107779)
+[![supports Android](https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff)](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=expo-three-orbit-controls)
+[![supports web](https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff)](https://docs.expo.io/workflow/web/)
 
-Three.js Orbit Controls bridged into React Native
+This is a very rough port of [Three.js `OrbitControls`](https://threejs.org/docs/#examples/en/controls/OrbitControls) for universal React apps with Expo.
 
-```jsx
-  <OrbitControls
-    style={{flex: 1}}
-    camera={this.state.camera}>
-    <Expo.GLView
-      style={{ flex: 1 }}
-      onContextCreate={this._onGLContextCreate}
-    />
-  </OrbitControls>
+- Fully written in TypeScript because it's the best! 🌟
+- Internally this uses a basic PanResponder for gestures. PRs to migrate PanResponder to React Native Gesture Handler are very welcome.
+- On web, two finger gestures aren't currently implemented.
+- On native, the camera may jump when panning + zooming ends due to issues with React Native `PanResponder`.
+
+## ☁️ Installation
+
+```sh
+yarn add expo-three-orbit-controls
 ```
 
-## Usage
+## 🚀 Usage
 
-[![NPM](https://nodei.co/npm/expo-three-orbit-controls.png)](https://nodei.co/npm/expo-three-orbit-controls/)
+Import into your project:
 
-#### `import OrbitControls from 'expo-three-orbit-controls'`
+```tsx
+import OrbitControlsView from 'expo-three-orbit-controls';
+```
+
+Check out the [example](./example/App.tsx) for more info.
