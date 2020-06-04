@@ -47,10 +47,7 @@ const OrbitControlsView = React.forwardRef(
 
     const responder = React.useMemo(() => {
       function onTouchEnded(nativeEvent) {
-        console.log('end: ', nativeEvent);
-        console.log('end: changedTouches: ', nativeEvent.changedTouches);
         const polyfill = polyfillEventTouches(nativeEvent);
-        console.log('end: polyfill: ', nativeEvent.touches);
 
         // If only one touch then we may be encountering the bug where pan responder returns a two finger touch-end event in two different calls. :/
         // RNGH doesn't have this issue.
