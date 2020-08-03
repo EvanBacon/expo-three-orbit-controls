@@ -407,10 +407,6 @@ export class OrbitControls extends EventDispatcher {
 
   getAzimuthalAngle = () => this.spherical.theta;
 
-  setPolarAngle = (phi: number) => (this.spherical.phi = phi);
-
-  setAzimuthalAngle = (theta: number) => (this.spherical.theta = theta);
-
   getState = () => this.state;
 
   saveState = () => {
@@ -480,11 +476,11 @@ export class OrbitControls extends EventDispatcher {
     return 0.95 ** this.zoomSpeed;
   };
 
-  private rotateLeft = (angle: number) => {
+  rotateLeft = (angle: number) => {
     this.sphericalDelta.theta -= angle;
   };
 
-  private rotateUp = (angle: number) => {
+  rotateUp = (angle: number) => {
     this.sphericalDelta.phi -= angle;
   };
 
