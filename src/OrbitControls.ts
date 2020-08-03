@@ -407,6 +407,12 @@ export class OrbitControls extends EventDispatcher {
 
   getAzimuthalAngle = () => this.spherical.theta;
 
+  setPolarAngle = (phi: number) => (this.spherical.phi = phi);
+
+  setAzimuthalAngle = (theta: number) => (this.spherical.theta = theta);
+
+  getState = () => this.state;
+
   saveState = () => {
     this.target0.copy(this.target);
     this.position0.copy(this.object.position);
