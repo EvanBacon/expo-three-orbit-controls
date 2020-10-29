@@ -20,7 +20,7 @@ function polyfillEventTouches(nativeEvent) {
 }
 
 const OrbitControlsView = React.forwardRef(
-  ({ camera, ...props }: OrbitControlsViewProps, ref) => {
+  ({ camera, enabled = true, config = {}, ...props }: OrbitControlsViewProps, ref) => {
     const [size, setSize] = React.useState<null | {
       width: number;
       height: number;
@@ -29,11 +29,11 @@ const OrbitControlsView = React.forwardRef(
     const viewRef = React.useRef(null);
 
     const controls: OrbitControls | null = React.useMemo(() => {
-      if (camera && viewRef?.current) {
-        return new OrbitControls(camera as any, viewRef.current);
+      if (camera && enabled && config && viewRef?.current) {
+        return new OrbitControls(camera as any, enabled, config, viewRef.current);
       }
       return null;
-    }, [camera, viewRef?.current]);
+    }, [camera, enabled, config, viewRef?.current]);
 
     React.useImperativeHandle(
       ref,

@@ -25,4 +25,17 @@ Import into your project:
 import OrbitControlsView from 'expo-three-orbit-controls';
 ```
 
+## ✌️ Modifications by WebBeard
+
+- Possibility to enable / disable OrbitControls from props
+- Possibility to change all the config properties from props.
+
+Example :
+```tsx
+<OrbitControlsView style={{ flex: 1 }} camera={camera} enabled={true} config={{enableRotate: false, minPolarAngle: Math.PI/2, maxPolarAngle: Math.PI/2, enableZoom: false}}>
+    // GLView, etc
+<OrbitControlsView>
+```
+
 Check out the [example](./example/App.tsx) for more info.
+
