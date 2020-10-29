@@ -8,6 +8,7 @@
  * @author WestLangley / http://github.com/WestLangley
  * @author erich666 / http://erichaines.com
  * @author ScieCode / http://github.com/sciecode
+ * @author WebBeard / http://github.com/WebBeard
  */
 
 import {
@@ -169,9 +170,52 @@ export class OrbitControls extends EventDispatcher {
       isOrthographicCamera?: boolean;
       isPerspectiveCamera?: boolean;
     },
+    enabled,
+    config,
     ref?: any
   ) {
     super();
+
+    // Set to false to disable this control
+    this.enabled = enabled;
+    // "target" sets the location of focus, where the object orbits around
+    this.target = new Vector3();
+    // How far you can dolly in and out ( PerspectiveCamera only )
+    this.minDistance = config.hasOwnProperty('minDistance') ? config.minDistance : 0;
+    this.maxDistance = config.hasOwnProperty('maxDistance') ? config.maxDistance : Infinity;
+    // How far you can zoom in and out ( OrthographicCamera only )
+    this.minZoom = config.hasOwnProperty('minZoom') ? config.minZoom : 0;
+    this.maxZoom = config.hasOwnProperty('maxZoom') ? config.maxZoom : Infinity;
+    // How far you can orbit vertically, upper and lower limits.
+    // Range is 0 to Math.PI radians.
+    this.minPolarAngle = config.hasOwnProperty('minPolarAngle') ? config.minPolarAngle : 0; // radians
+    this.maxPolarAngle = config.hasOwnProperty('maxPolarAngle') ? config.maxPolarAngle : Math.PI; // radians
+    // How far you can orbit horizontally, upper and lower limits.
+    // If set, must be a sub-interval of the interval [ - Math.PI, Math.PI ].
+    this.minAzimuthAngle = config.hasOwnProperty('minAzimuthAngle') ? config.minAzimuthAngle : -Infinity; // radians
+    this.maxAzimuthAngle = config.hasOwnProperty('maxAzimuthAngle') ? config.maxAzimuthAngle : Infinity; // radians
+    // Set to true to enable damping (inertia)
+    // If damping is enabled, you must call controls.update() in your animation loop
+    this.enableDamping = config.hasOwnProperty('enableDamping') ? config.enableDamping : false;
+    this.dampingFactor = config.hasOwnProperty('dampingFactor') ? config.dampingFactor : 0.05;
+    // This option actually enables dollying in and out; left as "zoom" for backwards compatibility.
+    // Set to false to disable zooming
+    this.enableZoom = config.hasOwnProperty('enableZoom') ? config.enableZoom : true;
+    this.zoomSpeed = config.hasOwnProperty('zoomSpeed') ? config.zoomSpeed : 1.0;
+    // Set to false to disable rotating
+    this.enableRotate = config.hasOwnProperty('enableRotate') ? config.enableRotate : true;
+    this.rotateSpeed = config.hasOwnProperty('rotateSpeed') ? config.rotateSpeed : 1.0;
+    // Set to false to disable panning
+    this.enablePan = config.hasOwnProperty('enablePan') ? config.enablePan : true;
+    this.panSpeed = config.hasOwnProperty('panSpeed') ? config.panSpeed : 1.0;
+    this.screenSpacePanning = config.hasOwnProperty('screenSpacePanning') ? config.screenSpacePanning : false; // if true, pan in screen-space
+    this.keyPanSpeed = config.hasOwnProperty('keyPanSpeed') ? config.keyPanSpeed : 7.0; // pixels moved per arrow key push
+    // Set to true to automatically rotate around the target
+    // If auto-rotate is enabled, you must call controls.update() in your animation loop
+    this.autoRotate = config.hasOwnProperty('autoRotate') ? config.autoRotate : false;
+    this.autoRotateSpeed = config.hasOwnProperty('autoRotateSpeed') ? config.autoRotateSpeed : 2.0; // 30 seconds per round when fps is 60
+    // Set to false to disable use of the keys
+    this.enableKeys = config.hasOwnProperty('enableKeys') ? config.enableKeys : true;
 
     if (ref && Platform.OS === 'web' && typeof window !== 'undefined') {
       this.domElement = getNode(ref) || window.document;
