@@ -1008,14 +1008,15 @@
     "@babel/preset-typescript" "^7.3.3"
     typescript "3.7.3"
 
-"@expo/browser-polyfill@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@expo/browser-polyfill/-/browser-polyfill-0.1.0.tgz#225dc667b22f8b247fa11aa961537f3a43c4fe48"
-  integrity sha512-L1Bc7R8F/Q+aiuA2z3s7QKqu5rxxY0ZlDVmB3pxAbB7CqTW3WX5e1e1Qg0Pxm1ZCjNhqgBQhTz9I0Tfaqc4d2g==
+"@expo/browser-polyfill@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@expo/browser-polyfill/-/browser-polyfill-0.1.1.tgz#1c4ee31744fa2f8e07a7ec0bfd47fbea80deba8f"
+  integrity sha512-PuG+1ZJUUACqWjyCe/pDq9YS8CsNsf08Ir1iftydvjCDqQjXmzQcZSffCeamTdHhIzFr9KA/ICg8+Z22+EeNvQ==
   dependencies:
     expo-2d-context "^0.0.2"
     fbemitter "^2.1.1"
     text-encoding "^0.7.0"
+    uuid "^8.3.2"
     xmldom-qsa "^1.0.3"
 
 "@expo/config@^2.5.3":
@@ -3797,10 +3798,10 @@ expo-2d-context@^0.0.2:
     string-format "0.5.0"
     tess2 "^1.0.0"
 
-expo-asset-utils@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/expo-asset-utils/-/expo-asset-utils-1.2.0.tgz#df52f8e8c836c343ad713a0044db79be69cfe64b"
-  integrity sha512-06zVi5aXzyMq7SFiawxu2FUbpbVlxnE9W44cG4K5HyhLaqyRqss+o5MZMEGn8Ibd+008UiK7yCPy/bSpx2hVag==
+expo-asset-utils@~2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/expo-asset-utils/-/expo-asset-utils-2.0.0.tgz#6c262c14cd61297591d9fdcb122a52d51eee0f8f"
+  integrity sha512-hkstktApGwTKjF5Y7xWcbc86taJEPk/gUw+fwUbab9VELrDAW2K/wzVjW4BthlHOL8bwfoCs2h61XC6/lgnpRw==
 
 expo-asset@~8.1.4:
   version "8.1.5"
@@ -3902,13 +3903,13 @@ expo-sqlite@~8.1.0:
     "@types/websql" "^0.0.27"
     lodash "^4.17.15"
 
-expo-three@5.5.1:
-  version "5.5.1"
-  resolved "https://registry.yarnpkg.com/expo-three/-/expo-three-5.5.1.tgz#05caff7692f4ca84a3cb14115afe2824a7dce52e"
-  integrity sha512-OVWbBG2IKrnlBgTczqMdWQgNuMcll8JtIgsZgB48Ted7g8s6L3+70YRrbS44ZzteKs5l0+LFfT+xMGuE06KLEA==
+expo-three@^5.5.1:
+  version "5.7.0"
+  resolved "https://registry.yarnpkg.com/expo-three/-/expo-three-5.7.0.tgz#ecbfc0c47222ad742d459847c4a707fe08f36ddc"
+  integrity sha512-bxZMeeSN4g68egmuDiSa32p4chUtv1SkBwVGRqInKvT23gXIYbAdWI5wKKWapdyNecDwawbZ0zxXM5uBIpvl5A==
   dependencies:
-    "@expo/browser-polyfill" "^0.1.0"
-    expo-asset-utils "^1.2.0"
+    "@expo/browser-polyfill" "^0.1.1"
+    expo-asset-utils "~2.0.0"
 
 expo-web-browser@~8.1.0:
   version "8.1.1"
@@ -7590,9 +7591,9 @@ qs@~6.5.2:
   integrity sha512-N5ZAX4/LxJmF+7wN74pUD6qAh9/wnvdQcjq9TZjevvXzSUo7bfmw91saqMjzGS2xq91/odN2dW/WOl7qQHNDGA==
 
 querystringify@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.1.1.tgz#60e5a5fd64a7f8bfa4d2ab2ed6fdf4c85bad154e"
-  integrity sha512-w7fLxIRCRT7U8Qu53jQnJyPkYZIaR4n5151KMfcJlO/A9397Wxb1amJvROTK6TOnp7PfoAmg/qXiNHI+08jRfA==
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.2.0.tgz#3345941b4153cb9d082d8eee4cda2016a9aef7f6"
+  integrity sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==
 
 raf@^3.4.1:
   version "3.4.1"
@@ -9196,9 +9197,9 @@ urix@^0.1.0:
   integrity sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
 
 url-parse@^1.4.4:
-  version "1.4.7"
-  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.4.7.tgz#a8a83535e8c00a316e403a5db4ac1b9b853ae278"
-  integrity sha512-d3uaVyzDB9tQoSXFvuSUNFibTd9zxd2bkVrDRvF5TmvWWQwqE4lgYJ5m+x1DbecWkw+LK4RNl2CU1hHuOKPVlg==
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.1.tgz#d5fa9890af8a5e1f274a2c98376510f6425f6e3b"
+  integrity sha512-HOfCOUJt7iSYzEx/UqgtwKRMC6EU91NFhsCHMv9oM03VJcVo2Qrp8T8kI9D7amFf1cu+/3CEhgb3rF9zL7k85Q==
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
@@ -9232,6 +9233,11 @@ uuid@^3.3.2, uuid@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
+
+uuid@^8.3.2:
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
+  integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
 
 v8-compile-cache@^2.0.3:
   version "2.1.1"
