@@ -217,7 +217,7 @@ export class OrbitControls extends EventDispatcher {
         this.object.up,
         new Vector3(0, 1, 0)
       );
-      const quatInverse = quat.clone().invert();
+      const quatInverse = quat.clone().inverse();
 
       const lastPosition = new Vector3();
       const lastQuaternion = new Quaternion();
